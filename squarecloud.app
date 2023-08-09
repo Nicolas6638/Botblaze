@@ -1,5 +1,5 @@
 DISPLAY_NAME=Meu bot
-MAIN=Main.py
+MAIN=main.py
 MEMORY=125
 DESCRIPTION=Hospedagem 
 VERSION=recommended
