@@ -221,42 +221,53 @@ class WebScraper:
         elif self.analisar == True:  
       
 
-            # ESTRATÉGIAS PERSONALIZADAS USANDO CORES E NUMEROS
+            # ESTRATÉGIAS (1) Quebra Branco
             if finalcor[0:4] == ['V','P', 'B', 'P']:
                 self.direction_color = '🔴'
                 self.send_sinal()    
                 return
-            
+            # ESTRATÉGIAS (2) Vai de nazare 
             if finalcor[0:3] == ['V','V','P']:
                 self.direction_color = '⚫️'
                 self.send_sinal()    
                 return
-            
+            # ESTRATÉGIAS (3) Vai de nazare double
             if finalcor[0:4] == ['P','P','V','V']:
                 self.direction_color = '🔴'
                 self.send_sinal()    
                 return
             
-            # ALERTA DAS ESTRATÉGIAS
+              # ESTRATÉGIAS (4) Black wihte
+            if finalcor[0:3] == ['P','B','P']:
+                self.direction_color = '🔴'
+                self.send_sinal()    
+                return
+            
+            # ALERTA DAS ESTRATÉGIAS #(1) Quebra Branco
             if finalcor[0:3] == ['P', 'B', 'P']:
                 print("ALERTA DE POSSÍVEL SINAL")
                 self.alert_sinal()
                 return
-
-
- # ALERTA DAS ESTRATÉGIAS
+        
+            # ALERTA DAS ESTRATÉGIAS (2) Vai de nazare 
             if finalcor[0:2] == ['V','P']:
                 print("ALERTA DE POSSÍVEL SINAL")
                 self.alert_sinal()
                 return
 
 
- # ALERTA DAS ESTRATÉGIAS
+            # ALERTA DAS ESTRATÉGIAS (3) Vai de nazare double
             if finalcor[0:3] == ['P','V','V']:
                 print("ALERTA DE POSSÍVEL SINAL")
                 self.alert_sinal()
                 return
 
+
+            # ALERTA DAS ESTRATÉGIAS (3) Black wihte
+            if finalcor[0:2] == ['B','P']:
+                print("ALERTA DE POSSÍVEL SINAL")
+                self.alert_sinal()
+                return
 
 
 
