@@ -3,6 +3,7 @@ import requests
 import telebot
 import time
 import json
+gunicorn --bind=0.0.0.0:$PORT --workers=4 myapp:start_app()
 
 class WebScraper:
 
